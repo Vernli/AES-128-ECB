@@ -1,0 +1,691 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C9898B12E0F1153004B9856 /* AES_128_CORE.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9898A82E0F1153004B9856 /* AES_128_CORE.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C9899382E0F3D0F004B9856 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 1C9899372E0F3D0F004B9856 /* ArgumentParser */; };
+		1C98996A2E0F4B85004B9856 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C63D1A12DFAB10400B7DB57 /* Metal.framework */; };
+		1C98996B2E0F4B8A004B9856 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C63D19F2DFAB0F700B7DB57 /* MetalKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1C9898AE2E0F1153004B9856 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CC1BDF72DBB8C6700B28384 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C9898A72E0F1153004B9856;
+			remoteInfo = "AES-128-CORE";
+		};
+		1C9899152E0F38C2004B9856 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CC1BDF72DBB8C6700B28384 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C9898A72E0F1153004B9856;
+			remoteInfo = "AES-128-CORE";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1C98988A2E0F1124004B9856 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		1C9898B52E0F1153004B9856 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1C9898B12E0F1153004B9856 /* AES_128_CORE.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1C63D19F2DFAB0F700B7DB57 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		1C63D1A12DFAB10400B7DB57 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		1C98988C2E0F1124004B9856 /* AES-128-CLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "AES-128-CLI"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C9898972E0F113F004B9856 /* AES-128-GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AES-128-GUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C9898A82E0F1153004B9856 /* AES_128_CORE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AES_128_CORE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1C98990F2E0F3835004B9856 /* Exceptions for "AES-128-GUI" folder in "AES-128-CORE" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AES_128_GUIApp.swift,
+				Assets.xcassets,
+				ContentView.swift,
+				CryptoManager.swift,
+				LoadingView.swift,
+			);
+			target = 1C9898A72E0F1153004B9856 /* AES-128-CORE */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		1C9898982E0F113F004B9856 /* AES-128-GUI */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1C98990F2E0F3835004B9856 /* Exceptions for "AES-128-GUI" folder in "AES-128-CORE" target */,
+			);
+			path = "AES-128-GUI";
+			sourceTree = "<group>";
+		};
+		1C9898A92E0F1153004B9856 /* AES-128-CORE */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "AES-128-CORE";
+			sourceTree = SOURCE_ROOT;
+		};
+		1C9898D92E0F12C7004B9856 /* AES-128-CLI */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "AES-128-CLI";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C9898892E0F1124004B9856 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C98996B2E0F4B8A004B9856 /* MetalKit.framework in Frameworks */,
+				1C98996A2E0F4B85004B9856 /* Metal.framework in Frameworks */,
+				1C9899382E0F3D0F004B9856 /* ArgumentParser in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C9898942E0F113F004B9856 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C9898A52E0F1153004B9856 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C63D19E2DFAB0F700B7DB57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C63D1A12DFAB10400B7DB57 /* Metal.framework */,
+				1C63D19F2DFAB0F700B7DB57 /* MetalKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1CC1BDF62DBB8C6700B28384 = {
+			isa = PBXGroup;
+			children = (
+				1C9898D92E0F12C7004B9856 /* AES-128-CLI */,
+				1C9898982E0F113F004B9856 /* AES-128-GUI */,
+				1C9898A92E0F1153004B9856 /* AES-128-CORE */,
+				1C63D19E2DFAB0F700B7DB57 /* Frameworks */,
+				1CC1BE002DBB8C6700B28384 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1CC1BE002DBB8C6700B28384 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C98988C2E0F1124004B9856 /* AES-128-CLI */,
+				1C9898972E0F113F004B9856 /* AES-128-GUI.app */,
+				1C9898A82E0F1153004B9856 /* AES_128_CORE.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1C9898A32E0F1153004B9856 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1C98988B2E0F1124004B9856 /* AES-128-CLI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C9898902E0F1124004B9856 /* Build configuration list for PBXNativeTarget "AES-128-CLI" */;
+			buildPhases = (
+				1C9898892E0F1124004B9856 /* Frameworks */,
+				1C98988A2E0F1124004B9856 /* CopyFiles */,
+				1C9899082E0F3821004B9856 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C9899162E0F38C2004B9856 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1C9898A92E0F1153004B9856 /* AES-128-CORE */,
+				1C9898D92E0F12C7004B9856 /* AES-128-CLI */,
+			);
+			name = "AES-128-CLI";
+			packageProductDependencies = (
+				1C9899372E0F3D0F004B9856 /* ArgumentParser */,
+			);
+			productName = "AES-128-CLI";
+			productReference = 1C98988C2E0F1124004B9856 /* AES-128-CLI */;
+			productType = "com.apple.product-type.tool";
+		};
+		1C9898962E0F113F004B9856 /* AES-128-GUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C9898A02E0F1140004B9856 /* Build configuration list for PBXNativeTarget "AES-128-GUI" */;
+			buildPhases = (
+				1C9898932E0F113F004B9856 /* Sources */,
+				1C9898942E0F113F004B9856 /* Frameworks */,
+				1C9898952E0F113F004B9856 /* Resources */,
+				1C9898B52E0F1153004B9856 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C9898AF2E0F1153004B9856 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1C9898982E0F113F004B9856 /* AES-128-GUI */,
+				1C9898A92E0F1153004B9856 /* AES-128-CORE */,
+			);
+			name = "AES-128-GUI";
+			packageProductDependencies = (
+			);
+			productName = "AES-128-GUI";
+			productReference = 1C9898972E0F113F004B9856 /* AES-128-GUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1C9898A72E0F1153004B9856 /* AES-128-CORE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C9898B22E0F1153004B9856 /* Build configuration list for PBXNativeTarget "AES-128-CORE" */;
+			buildPhases = (
+				1C9898A32E0F1153004B9856 /* Headers */,
+				1C9898A42E0F1153004B9856 /* Sources */,
+				1C9898A52E0F1153004B9856 /* Frameworks */,
+				1C9898A62E0F1153004B9856 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C9899632E0F473A004B9856 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1C9898982E0F113F004B9856 /* AES-128-GUI */,
+				1C9898A92E0F1153004B9856 /* AES-128-CORE */,
+			);
+			name = "AES-128-CORE";
+			packageProductDependencies = (
+			);
+			productName = "AES-128-CORE";
+			productReference = 1C9898A82E0F1153004B9856 /* AES_128_CORE.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1CC1BDF72DBB8C6700B28384 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					1C98988B2E0F1124004B9856 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					1C9898962E0F113F004B9856 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					1C9898A72E0F1153004B9856 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+				};
+			};
+			buildConfigurationList = 1CC1BDFA2DBB8C6700B28384 /* Build configuration list for PBXProject "AES" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1CC1BDF62DBB8C6700B28384;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1C9899362E0F3D0F004B9856 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1CC1BE002DBB8C6700B28384 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C98988B2E0F1124004B9856 /* AES-128-CLI */,
+				1C9898962E0F113F004B9856 /* AES-128-GUI */,
+				1C9898A72E0F1153004B9856 /* AES-128-CORE */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1C9898952E0F113F004B9856 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C9898A62E0F1153004B9856 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C9898932E0F113F004B9856 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C9898A42E0F1153004B9856 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C9899082E0F3821004B9856 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1C9898AF2E0F1153004B9856 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C9898A72E0F1153004B9856 /* AES-128-CORE */;
+			targetProxy = 1C9898AE2E0F1153004B9856 /* PBXContainerItemProxy */;
+		};
+		1C9899162E0F38C2004B9856 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C9898A72E0F1153004B9856 /* AES-128-CORE */;
+			targetProxy = 1C9899152E0F38C2004B9856 /* PBXContainerItemProxy */;
+		};
+		1C9899632E0F473A004B9856 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 1C9899622E0F473A004B9856 /* ArgumentParser */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1C9898912E0F1124004B9856 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72NDTYN888;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1C9898922E0F1124004B9856 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72NDTYN888;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		1C9898A12E0F1140004B9856 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "AES-128-GUI/AES_128_GUI.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72NDTYN888;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "krajewski.AES-128-GUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1C9898A22E0F1140004B9856 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "AES-128-GUI/AES_128_GUI.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72NDTYN888;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "krajewski.AES-128-GUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		1C9898B32E0F1153004B9856 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72NDTYN888;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = "krajewski.AES-128-CORE";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1C9898B42E0F1153004B9856 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72NDTYN888;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = "krajewski.AES-128-CORE";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1CC1BE042DBB8C6700B28384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 72NDTYN888;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1CC1BE052DBB8C6700B28384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 72NDTYN888;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C9898902E0F1124004B9856 /* Build configuration list for PBXNativeTarget "AES-128-CLI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C9898912E0F1124004B9856 /* Debug */,
+				1C9898922E0F1124004B9856 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C9898A02E0F1140004B9856 /* Build configuration list for PBXNativeTarget "AES-128-GUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C9898A12E0F1140004B9856 /* Debug */,
+				1C9898A22E0F1140004B9856 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C9898B22E0F1153004B9856 /* Build configuration list for PBXNativeTarget "AES-128-CORE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C9898B32E0F1153004B9856 /* Debug */,
+				1C9898B42E0F1153004B9856 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CC1BDFA2DBB8C6700B28384 /* Build configuration list for PBXProject "AES" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CC1BE042DBB8C6700B28384 /* Debug */,
+				1CC1BE052DBB8C6700B28384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1C9899362E0F3D0F004B9856 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1C9899372E0F3D0F004B9856 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C9899362E0F3D0F004B9856 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+		1C9899622E0F473A004B9856 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C9899362E0F3D0F004B9856 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 1CC1BDF72DBB8C6700B28384 /* Project object */;
+}
