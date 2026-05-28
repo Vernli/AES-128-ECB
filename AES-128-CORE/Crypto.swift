@@ -2,8 +2,14 @@ import Foundation
 import Metal
 
 public class Crypto {
+    public enum Operation {
+        case encryption
+        case decryption
+    }
+
     private let filePath: String;
     private let _keyData: Data;
+    private let operation: Operation;
     
     private let blocks: [[UInt8]];
     private var _data: Data;
@@ -21,10 +27,11 @@ public class Crypto {
     private let aes: AES = AES();
     private var metalAES: MetalAES!
     
-    public init(filePath: String, keyData: Data) {
+    public init(filePath: String, keyData: Data, operation: Operation = .encryption) {
         self.filePath = filePath;
         self._keyData = keyData;
-        guard let blocks = try? BlockSpliter.loadFileFromFilePath(filePath: filePath) else { fatalError("ERROR")}
+        self.operation = operation;
+        guard let blocks = try? BlockSpliter.loadFileFromFilePath(filePath: filePath, padded: operation == .encryption) else { fatalError("ERROR")}
         self.blocks = blocks;
         self._data = Data(count: blocks.count * 16)
 
@@ -120,6 +127,7 @@ public func cpuEncryption(saveResult: Bool = false, threadCount: Int = ProcessIn
             }
         }
     }
+    removePaddingAfterDecryption()
     if (saveResult) {
         try? saveFile(data: data, originalPath: filePath, extension: "dec", suffix: "seq")
     }
@@ -147,6 +155,7 @@ public func cpuEncryption(saveResult: Bool = false, threadCount: Int = ProcessIn
             }
         }
 
+        removePaddingAfterDecryption()
         if saveResult {
             try? saveFile(data: data,
                          originalPath: filePath,
@@ -162,6 +171,7 @@ public func cpuEncryption(saveResult: Bool = false, threadCount: Int = ProcessIn
             metalAES.run()
         }
         data = metalAES.getOutputBlocks()
+        removePaddingAfterDecryption()
         
         if (saveResult) {
             try? saveFile(data: data, originalPath: filePath, extension: "dec", suffix: "gpu")
@@ -183,12 +193,12 @@ public func cpuEncryption(saveResult: Bool = false, threadCount: Int = ProcessIn
         }
     }
 
-    
-    private func loadFileFromFilePath(filePath: String) throws -> [[UInt8]] {
-        let originalData = try BlockSpliter.readFile(from: filePath)
-        let paddedData = BlockSpliter.pad(originalData)
-        let blocks = BlockSpliter.splitIntoBlocks(paddedData)
-        return blocks.map { Array($0) }
+    private func removePaddingAfterDecryption() {
+        guard operation == .decryption else { return }
+        guard let unpaddedData = try? BlockSpliter.unpad(data) else {
+            fatalError("Invalid PKCS#7 padding. Wrong key or corrupted encrypted file.")
+        }
+        data = unpaddedData
     }
     
     func measureTime<T>(_ label: String = "", block: () throws -> T) rethrows {
@@ -219,5 +229,4 @@ public func cpuEncryption(saveResult: Bool = false, threadCount: Int = ProcessIn
     
     private let elapsedTime = { (start: DispatchTime, end: DispatchTime) -> Double in return Double(end.uptimeNanoseconds - start.uptimeNanoseconds) / 1_000_000_000}
 }
-
 

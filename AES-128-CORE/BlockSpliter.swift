@@ -2,6 +2,7 @@ import Foundation
 
 enum BlockSpliterError: Error {
     case invalidPadding
+    case invalidBlockSize
     case fileReadError
 }
 
@@ -21,13 +22,12 @@ struct BlockSpliter {
         }
 
         let paddingCount = Int(data.last!)
-        print(paddingCount)
         try validatePadding(data, paddingLength: paddingCount)
         return data.dropLast(paddingCount)
     }
 
     private static func validatePadding(_ data: Data, paddingLength: Int) throws {
-        guard data.count >= paddingLength && paddingLength > 0 else {
+        guard data.count >= paddingLength && paddingLength > 0 && paddingLength <= defaultBlockSize else {
             throw BlockSpliterError.invalidPadding
         }
 
@@ -53,11 +53,13 @@ struct BlockSpliter {
         return data
     }
     
-    static func loadFileFromFilePath(filePath: String) throws -> [[UInt8]] {
+    static func loadFileFromFilePath(filePath: String, padded: Bool = true) throws -> [[UInt8]] {
         let originalData = try readFile(from: filePath)
-        let paddedData = pad(originalData)
-        let blocks = splitIntoBlocks(paddedData)
+        let blockData = padded ? pad(originalData) : originalData
+        guard padded || blockData.count % defaultBlockSize == 0 else {
+            throw BlockSpliterError.invalidBlockSize
+        }
+        let blocks = splitIntoBlocks(blockData)
         return blocks.map { Array($0) }
     }
 }
-

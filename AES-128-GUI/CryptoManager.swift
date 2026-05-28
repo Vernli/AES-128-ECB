@@ -40,7 +40,7 @@ class CryptoManager {
         switch mode {
         case .encryption:
             let keyData = KeyOps.generateKey()
-            let crypto = Crypto(filePath: filePath, keyData: keyData!)
+            let crypto = Crypto(filePath: filePath, keyData: keyData!, operation: .encryption)
             performEncryption(using: crypto)
 
         case .decryption:
@@ -48,7 +48,7 @@ class CryptoManager {
                   let keyData = try? Data(contentsOf: URL(fileURLWithPath: keyPath)) else {
                 return
             }
-            let crypto = Crypto(filePath: filePath, keyData: keyData)
+            let crypto = Crypto(filePath: filePath, keyData: keyData, operation: .decryption)
             performDecryption(using: crypto)
         }
     }

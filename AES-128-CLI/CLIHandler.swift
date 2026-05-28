@@ -90,7 +90,7 @@ struct CLIHandler {
         let filePath = filePath.isEmpty ? readFilePath(text: "Path to the file:") : filePath
         let keyData: Data = KeyOps.generateKey()!
         
-        let crypto = Crypto(filePath: filePath, keyData: keyData)
+        let crypto = Crypto(filePath: filePath, keyData: keyData, operation: .encryption)
         
         switch mode {
             case .SEQ:
@@ -111,7 +111,7 @@ struct CLIHandler {
         
         let keyData = try! Data(contentsOf: URL(fileURLWithPath: keyPath))
         
-        let crypto = Crypto(filePath: filePath, keyData: keyData)
+        let crypto = Crypto(filePath: filePath, keyData: keyData, operation: .decryption)
         
         switch mode {
             case .SEQ:
@@ -127,6 +127,5 @@ struct CLIHandler {
 
     }
 }
-
 
 
